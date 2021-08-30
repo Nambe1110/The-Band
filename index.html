@@ -185,7 +185,7 @@
             </div>
             <p class="copy-right"> 
                 Maded by 
-                <a href=#">Nguyễn Hoàng Nam</a>
+                <a href="#">Nguyễn Hoàng Nam</a>
             </p>
         </div>
     
@@ -209,14 +209,14 @@
                     Tickets, $15 per person
                 </label>
 
-                <input id="ticket-quantity" type="text" class="modal-input" placeholder="How many ?">
+                <input id="ticket-quantity" type="text" class="modal-input" placeholder="How many ?" required id="modal-input">
 
                 <label for="ticket-email" class="modal-label">
                     <i class="fas fa-user-alt"></i>
                     Send To
                 </label>
 
-                <input id="ticket-email" type="text" class="modal-input" placeholder="Enter email">
+                <input id="ticket-email" type="text" class="modal-input" placeholder="Enter email" required id="modal-input">
 
                 <button id="buy-tickets">
                     Pay <i class="fas fa-check"></i>
@@ -234,33 +234,33 @@
     </div>
     
     <script>
-        const buyBtns = document.querySelectorAll('.js-buy-ticket')
-        const modal = document.querySelector('.js-modal')
-        const modalclose = document.querySelector('.js-modal-close')
-        const modalcontainer =document.querySelector('.js-modal-container') 
-
+        const buyBtns = document.querySelectorAll('.js-buy-ticket');
+        const modal = document.querySelector('.js-modal');
+        const modalClose = document.querySelector('.js-modal-close');
+        const modalContainer =document.querySelector('.js-modal-container') ;
+      
         // Hiển thị modal mua vé (thêm class open sau modal)  
         function showBuyTicketModal() {
-            modal.classList.add('open')
+            modal.classList.add('open');
         }
         for(const buyBtn of buyBtns) {
-            buyBtn.addEventListener('click', showBuyTicketModal )
+            buyBtn.addEventListener('click', showBuyTicketModal );
         }
 
         // Đóng modal mua vé (bỏ class open sau modal)  
         function closeBuyTicketModal() {
-            modal.classList.remove('open')
+            modal.classList.remove('open');
         }
-        modalclose.addEventListener('click', closeBuyTicketModal)
+        modalClose.addEventListener('click', closeBuyTicketModal);
 
          // Đóng modal mua vé khi nhận click vào màn hình (class modal đang bao hết màn hình)
-         modal.addEventListener('click', closeBuyTicketModal)
+        modal.addEventListener('click', closeBuyTicketModal);
 
         // DỪng việc đóng modal nếu click vào bên trong giao diện modal
-        function stopclosingBuyTicketModal(event) {
-           event.stopImmediatePropagation
+        function stopClosingBuyTicketModal(event) {
+            event.stopPropagation();
         }
-        modalcontainer.addEventListener('click', stopclosingBuyTicketModal )
+        modalContainer.addEventListener('click', stopClosingBuyTicketModal) ;
 
     </script>
 
