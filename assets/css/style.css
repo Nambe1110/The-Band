@@ -173,7 +173,7 @@ html {
 #slider{
     margin-top: 46px;
     padding-top: 50%; 
-    background-image:  url('/W3-Band/assets/img/Slider/chicago.jpg') ;
+    background-image:  url('../img/Slider/chicago.jpg') ;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -196,6 +196,7 @@ html {
 
 #slider .text-description {
     margin-top: 12px;
+    text-shadow: 0 0 1px black;
 }
 
 /* content */
@@ -453,15 +454,15 @@ html để giải quyết vấn đề float */
 .open {
     display: flex !important;
 }
+
 .modal .modal-container {
     background-color: white;
-    width: 66%;
+    width: 70%;
     min-height: 400px;
     position: relative;
     box-shadow: 0 0 12px rgba(0,0,0,0.4);
     animation: modalFadedIn ease 0.4s ;
 }
-
 
 .modal .modal-container .modal-header {
     background-color: #009688;

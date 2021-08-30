@@ -1,19 +1,19 @@
 /* PC */
-@media(min-width: 1024px) {
+@media(min-width: 64em) {
     #header .mobile-menu-btn {
         display: none;
     }
 }
 
 /* Tablet */
-@media(min-width:740px) and (max-width: 1023px) {
+@media(min-width:46.25em) and (max-width: 63.9375em) {
     #header .mobile-menu-btn {
         display: none;
     }
 }
 
 /* Mobile */
-@media(max-width: 739px) {
+@media(max-width: 46.1875em) {
 
     /* Header */
     #header {
@@ -72,6 +72,11 @@
         margin-bottom: 16px;
     }
 
+    /* Buy ticket modal */
+    .modal .modal-container  {
+       width: 88% ;
+    }
+
     /* COntent: Contact */
     .mobile-col-full,
     .mobile-full-width {
@@ -89,5 +94,6 @@
     #content .place-list .place-buy-btn {
         width: 90%;
     }
+    
     
 }
